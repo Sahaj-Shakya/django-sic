@@ -22,3 +22,5 @@ def bbs_view(request):
 def contact_us(request):
     return render(request, 'contact.html')
 
+def courses(request):
+    return render (request, 'courses.html')

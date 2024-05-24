@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 EXTERNAL_APPS = [
     'meme_app',
+    'lms',
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS

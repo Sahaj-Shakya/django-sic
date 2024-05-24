@@ -10,5 +10,7 @@ urlpatterns = [
     path('bbs/', bbs_view, name='bbs'),
     path('bbm/', bbm_view, name='bbm'),
     path('bca/', bca_view, name='bca'),
-    path('contact-us/', contact_us, name='contact-us')
+    path('contact-us/', contact_us, name='contact-us'),
+    path('courses/', courses, name='courses'),
+    
 ]
