@@ -19,3 +19,6 @@ def bbm_view(request):
 def bbs_view(request):
     return render(request, 'bbs.html')
 
+def contact_us(request):
+    return render(request, 'contact.html')
+
