@@ -1,26 +1,23 @@
 from django.shortcuts import render
+from .forms import ContactForm
+from.models import Contact
 
 # Create your views here.
 def home_view(request):
     return render(request, 'home.html')
 
 def about_us(request):
-    return render(request, 'about.html')
-
-def bca_view(request):
-    return render(request, 'bca.html')
-
-def ca_view(request):
-    return render(request, 'ca.html')
-
-def bbm_view(request):
-    return render(request, 'bbm.html')
-
-def bbs_view(request):
-    return render(request, 'bbs.html')
+    return render(request, './meme_app/about.html')
 
 def contact_us(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        print(form.data)
+    
+    form = ContactForm()
+    
+    context = {
+        'form': form
+    }
+    return render(request, 'meme_app/contact.html', context)
 
-def courses(request):
-    return render (request, 'courses.html')

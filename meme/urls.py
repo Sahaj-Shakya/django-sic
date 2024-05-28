@@ -1,6 +1,6 @@
 """
 URL configuration for meme project.
-
+app_name = 'lms'
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from meme_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('meme_app.urls')),
+    path('lms/', include('lms.urls')),
 ]

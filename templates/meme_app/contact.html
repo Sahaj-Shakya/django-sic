@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}
+Contact us
+{% endblock %}
+{% block content %}
+{% include '../navbar.html' %}
+<div class="container mt-4">
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+<div class="container">
+{% bootstrap_form form %}
+<button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+</div>
+{% endblock %}
